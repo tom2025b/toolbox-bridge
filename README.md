@@ -53,17 +53,13 @@ cloned the repos side by side and didn't `cargo install`).
 ## Usage
 
 ```bash
-# Read-only joined report: every script with its Bulwark risk + owner.
 ./bridge.py
-./bridge.py ~/bin ~/.local/bin          # restrict the scan to these paths
+./bridge.py ~/bin ~/.local/bin
 
-# Enrich ScriptVault — DRY RUN first (writes nothing):
 ./bridge.py --write-sidecars
 
-# Looks good? Actually write the sidecars:
 ./bridge.py --write-sidecars --apply
 
-# Point at a specific bulwark binary:
 ./bridge.py --bulwark /path/to/bulwark --write-sidecars
 ```
 
