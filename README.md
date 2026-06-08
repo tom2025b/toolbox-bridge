@@ -66,6 +66,18 @@ cloned the repos side by side and didn't `cargo install`).
 After `--apply`, open ScriptVault and the risk/owner tags are searchable and the
 `[RISK: …]` badge shows in the preview pane.
 
+## Tests
+
+The bridge has a pytest suite under `tests/` covering the tag/badge building,
+the non-clobbering merge, dry-run vs `--apply`, and on-disk idempotency. No
+`bulwark` binary is needed — the CLI tests stub the scan.
+
+```bash
+python3 -m venv .venv
+.venv/bin/pip install pytest pyyaml
+.venv/bin/python -m pytest
+```
+
 ## Extending it
 
 Field mapping lives in one place — `bridge_tags_from` / `merge_sidecar` in
