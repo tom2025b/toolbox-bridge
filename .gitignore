@@ -1,4 +1,6 @@
 .venv/
+# installer-created venv (linux-ops-suite/install.sh)
+.venv-suite/
 __pycache__/
 *.pyc
 .pytest_cache/
